@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommender</title>
+    <style>
+        textarea{
+            position: absolute;
+            margin-left: 5%;
+        }
+        title{
+            font: sans-serif;
+        }
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .left {
+            left: 0;
+            margin-left: 5%;
+        }
+        .right {
+            right: 0;
+            border: 3px solid #73AD21;
+        }
+        .results{
+            margin-left: 5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="split left">
+    <div><h1>Music Recommender</h1>
+    <p>Put in your fav song, album or artist and get another one just like it!</p>
+    <div>
+        <p>Or if you want something new, click the button below "genre" to get a random genre to listen to!</p>
+    </div>
+    </div>
+    <p>Choose one category: track, album, artist, genre  -  </p>
+    <!--track-->
+    <form method="post" name="track">
+        <p>- track</p>
+        Track Name: <input type="text" name="track name" required> 
+        Artist Name: <input type="text" name="track artist" required>
+        <br>
+        <button type="submit" name="track">Submit</button>
+        <br>
+    </form>
+    <!--album-->
+    <form method="post" name="album">
+        <p>- album</p>
+        Album Name: <input type="text" name="album name" required>
+        Artist Name: <input type="text" name="album artist" required>
+        <br>
+        <button type="submit" name="album">Submit</button>
+    </form>
+    <!--artist-->
+    <form method="post" name="artist">
+        <br><p>- artist</p>
+        Artist Name: <input type="text" name="artist name" required>
+        <br>
+        <button type="submit" name="artist">Submit</button>
+    </form>
+    <!--genre-->
+    <form method="post" name="genre">
+        <br><p>- genre</p>
+        <button type="submit" name="genre">Submit</button>
+    </form>
+    </div>
+    <div class="split right">
+    <br>
+    <p class="results">Results</p>
+    {% if results %}
+        <textarea rows="25" cols="75">{{ results }}</textarea>
+    {% endif %}
+    <br>
+    <p></p>
+    </div>
+    <br>
+</body>
+</html>

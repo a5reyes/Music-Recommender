@@ -1,0 +1,3 @@
+-pip install spotipy, unidecode
+-in order for the code to run,
+you may also need you own spotify client credentials, such as cilent id and cilent secret
