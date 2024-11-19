@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recommender</title>
     <style>
-        textarea{
+        textarea {
             position: absolute;
             margin-left: 5%;
+            max-width: calc(100% - 20px);
+            padding: 0 10px;
+            box-sizing: border-box;
         }
-        title{
+        title {
             font: sans-serif;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        .p1 {
+            font-style: italic;
+            word-break: break-word;
+            white-space: normal;
+            max-width: calc(100% - 20px);
+            padding: 0 10px;
+            box-sizing: border-box;
         }
         .split {
             height: 100%;
@@ -32,23 +46,26 @@
         .results{
             margin-left: 5%;
         }
-        
+        @media screen and (max-width: 800px) {
+          .left, .right {
+            display: block;
+            margin-bottom: 20px;
+          }
+        }
     </style>
 </head>
 <body>
     <div class="split left">
-    <div><h1>Music Recommender</h1>
-    <p>Put in your fav song, album or artist and get another one just like it!</p>
-    <div>
-        <p>Or if you want something new, click the button below "genre" to get a random genre to listen to!</p>
+    <div><h1 class="h1">Music Recommender</h1>
+    <p class="p1">Put in a song, album or artist or click genre and get recommendations!</p>
     </div>
-    </div>
-    <p>Choose one category: track, album, artist, genre  -  </p>
     <!--track-->
     <form method="post" name="track">
         <p>- track</p>
-        Track Name: <input type="text" name="track name" required> 
+        Track Name: <input type="text" name="track name" required>
+        <div>
         Artist Name: <input type="text" name="track artist" required>
+        </div>
         <br>
         <button type="submit" name="track">Submit</button>
         <br>
@@ -57,21 +74,24 @@
     <form method="post" name="album">
         <p>- album</p>
         Album Name: <input type="text" name="album name" required>
+        <div>
         Artist Name: <input type="text" name="album artist" required>
+        </div>
         <br>
         <button type="submit" name="album">Submit</button>
     </form>
     <!--artist-->
     <form method="post" name="artist">
         <br><p>- artist</p>
+        <div>
         Artist Name: <input type="text" name="artist name" required>
+        </div>
         <br>
         <button type="submit" name="artist">Submit</button>
     </form>
     <!--genre-->
     <form method="post" name="genre">
-        <br><p>- genre</p>
-        <button type="submit" name="genre">Submit</button>
+        <br><p>- genre - <button type="submit" name="genre">Submit</button></p>
     </form>
     </div>
     <div class="split right">
