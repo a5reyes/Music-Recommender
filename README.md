@@ -1,6 +1,5 @@
 # Music-Recommender
-website: https://reyesalbert34.pythonanywhere.com/
-#### ***DATED*** Video Demo: https://www.youtube.com/watch?v=aXGe6ySl05Y
+#### Video Demo: https://www.youtube.com/watch?v=aXGe6ySl05Y
 #### Description:
 Using Spofity APIs and Flask,
 this is a music recommender based on input of the user
