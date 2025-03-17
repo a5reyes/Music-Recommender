@@ -33,3 +33,7 @@ In the case of the album you'd prefer an astronaut by Hum (one of my favorite ba
 the apostrophe caused an error in my program so I made a titlecase method using regex to handle cases of items with apostrophes.
 I also used titlecase in conjunction with casefold to handle stylized artist names like girl in red or MGMT
 and also artists who love to stylize their discography using textcase like BROCKHAMPTON or Billie Eilish.
+
+#### As of 11-27-2024, 
+this application is currently unavailable because this application is in development mode and as of the date said previously, Spotify (whom I used for this application) doesn't allow new applications and/or existing applications in development mode to use their Web API.
+From Spotify, more info here: https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api
